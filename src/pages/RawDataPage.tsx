@@ -16,7 +16,7 @@ function RawDataPage(){
         
     }, [isbn])
     return (
-        <div className="pt-10">{JSON.stringify(book)}</div>
+        <div className="pt-10 whitespace-pre-wrap">{JSON.stringify(book, null, 2)}</div>
     )
 }
 
