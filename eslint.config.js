@@ -21,7 +21,10 @@ export default defineConfig([
           jsx: true,
         },
       },
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...jestGlobals.jest,
+      },
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
