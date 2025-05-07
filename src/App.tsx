@@ -5,10 +5,10 @@ import { LibraryPage } from "./pages/LibraryPage";
 function App() {
   return (
     <>
-      <div>
-        <nav>
-          <Link to="/" />
-          <Link to="/library" />
+      <div className="p-4">
+        <nav className="bg-blue-900 text-white flex space-x-10 p-4">
+          <Link to="/" >Raw data page</Link>
+          <Link to="/library" > Library Page</Link>
         </nav>
         <Routes>
           <Route path='/' element={<RawDataPage />} />

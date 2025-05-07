@@ -1,7 +1,7 @@
 function LibraryPage(){
 
     return (
-        <div>Library Page</div>
+        <div className="pt-10">Library Page</div>
     )
 }
 

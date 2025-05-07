@@ -1,6 +1,6 @@
 function RawDataPage(){
     return (
-        <div>Raw Data Page</div>
+        <div className="pt-10">Raw Data Page</div>
     )
 }
 
