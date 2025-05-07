@@ -12,8 +12,7 @@ async function getBookByISBN(isbn: string): Promise<GoogleBookResponse | null> {
       } catch (e) {
         console.error('Error fetching book:', e);
         return null;
-      }    
-
+      }
 }
 
 export { getBookByISBN }
