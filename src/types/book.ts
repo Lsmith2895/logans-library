@@ -1,44 +1,44 @@
 type GoogleBookResponse = {
-    items: GoogleBook[];
-    kind: string;
-    totalItems: number;
-}
+  items: GoogleBook[];
+  kind: string;
+  totalItems: number;
+};
 
 type GoogleBook = {
-    id: string;
-    volumeInfo: VolumeInfo;
-    kind: string;
-    etag: string;
-    selfLink: string;
-    saleInfo: {};
-    accessInfo: {};
-    searchInfo: {};
-}
+  id: string;
+  volumeInfo: VolumeInfo;
+  kind: string;
+  etag: string;
+  selfLink: string;
+  saleInfo: {};
+  accessInfo: {};
+  searchInfo: {};
+};
 
 type VolumeInfo = {
-    title: string;
-    subtitle?: string;
-    authors: string[];
-    description?: string;
-    publisher?: string;
-    publishedDate?: string;
-    readingModes: {};
-    printType: string;
-    imageLinks?: {
-        smallThumbnail: string;
-        thumbnail?: string;
-    };
-    maturityRating:string;
-    allowAnonLogging: boolean;
-    contentVersion: string;
-    panelizationSummary:{};
-    previewLink: string;
-    infoLink: string;
-    canonicalVolumeLink: string;
-    industryIdentifiers?:{}[];
-    pageCount?: number;
-    categories?: string[];
-    language?: string;
-}
+  title: string;
+  subtitle?: string;
+  authors: string[];
+  description?: string;
+  publisher?: string;
+  publishedDate?: string;
+  readingModes: {};
+  printType: string;
+  imageLinks?: {
+    smallThumbnail: string;
+    thumbnail?: string;
+  };
+  maturityRating: string;
+  allowAnonLogging: boolean;
+  contentVersion: string;
+  panelizationSummary: {};
+  previewLink: string;
+  infoLink: string;
+  canonicalVolumeLink: string;
+  industryIdentifiers?: {}[];
+  pageCount?: number;
+  categories?: string[];
+  language?: string;
+};
 
-export type { GoogleBookResponse, GoogleBook }
+export type { GoogleBookResponse, GoogleBook };

@@ -1,14 +1,14 @@
-import {render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react';
 import App from './App';
 import { MemoryRouter } from 'react-router-dom';
 import { BookProvider } from './context/BookContext';
-import userEvent from '@testing-library/user-event'
+import userEvent from '@testing-library/user-event';
 
 jest.mock('./utils/getGoogleBooksApiKey', () => ({
   getGoogleBooksApiKey: () => 'test-key',
 }));
 
-describe("App", () => {
+describe('App', () => {
   it('renders navigation and pages', async () => {
     render(
       <MemoryRouter initialEntries={['/']}>
@@ -25,7 +25,7 @@ describe("App", () => {
     expect(screen.getByPlaceholderText('Search For Books by ISBN')).toBeInTheDocument();
 
     // Navigate to library page
-    userEvent.click(screen.getByText('Library Page'))
-    expect(await screen.findByText('Library Page header')).toBeInTheDocument()
-  })
-})
+    userEvent.click(screen.getByText('Library Page'));
+    expect(await screen.findByText('Library Page header')).toBeInTheDocument();
+  });
+});

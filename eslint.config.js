@@ -9,6 +9,9 @@ import prettier from 'eslint-config-prettier';
 
 export default defineConfig([
   {
+    ignores: ['**/*.test.ts', '**/*.test.tsx', '**/__tests__/**'],
+  },
+  {
     files: ['src/**/*.{js,ts,jsx,tsx}'],
     languageOptions: {
       parser: tseslint.parser,
@@ -23,7 +26,7 @@ export default defineConfig([
       },
       globals: {
         ...globals.browser,
-        ...jestGlobals.jest,
+        React: true,
       },
     },
     plugins: {

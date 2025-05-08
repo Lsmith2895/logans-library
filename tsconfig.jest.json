@@ -1,10 +1,10 @@
 {
-    "extends": "./tsconfig.app.json",
-    "compilerOptions": {
-      "module": "CommonJS",
-      "moduleResolution": "node",
-      "verbatimModuleSyntax": false,
-      "esModuleInterop": true,
-      "jsx": "react-jsx"
-    }
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "verbatimModuleSyntax": false,
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
   }
+}
