@@ -2,7 +2,6 @@ import { useBookContext } from "../context/BookContext"
 
 function RawDataPage(){
     const { state } = useBookContext();
-    console.log(state.rawBook)
     return (
         <div className="pt-10 whitespace-pre-wrap">
             {JSON.stringify(state.rawBook, null, 2)}
