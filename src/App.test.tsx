@@ -25,7 +25,7 @@ describe("App", () => {
     expect(screen.getByPlaceholderText('Search For Books by ISBN')).toBeInTheDocument();
 
     //navigate to library page
-    await userEvent.click(screen.getByText('Library Page'))
+    userEvent.click(screen.getByText('Library Page'))
     expect(await screen.findByText('Library Page header')).toBeInTheDocument()
   })
 })
