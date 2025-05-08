@@ -17,6 +17,8 @@ function SearchBar(){
                 inputMode="numeric"
                 pattern="\d{1,13}"
                 maxLength={13}
+                minLength={10}
+                required
                 value={state.searchTerm}
                 placeholder="Search For Books by ISBN"
                 onChange={(e) => {
@@ -24,7 +26,7 @@ function SearchBar(){
                 }}
                 onInvalid={(e) => (
                     (e.target as HTMLInputElement)
-                        .setCustomValidity('Please enter a 10 or 13-digit ISBN')
+                        .setCustomValidity('Please enter a 10 or 13 digit ISBN')
                 )}
                 onInput={(e) => {
                     (e.target as HTMLInputElement)
