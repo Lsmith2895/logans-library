@@ -17,14 +17,14 @@ describe("App", () => {
         </BookProvider>
       </MemoryRouter>
     );
-    // check navbar exists
+    // Check navbar exists
     expect(screen.getByText('Raw data page')).toBeInTheDocument();
     expect(screen.getByText('Library Page')).toBeInTheDocument();
 
-    //check searchbar exists
+    // Check searchbar exists
     expect(screen.getByPlaceholderText('Search For Books by ISBN')).toBeInTheDocument();
 
-    //navigate to library page
+    // Navigate to library page
     userEvent.click(screen.getByText('Library Page'))
     expect(await screen.findByText('Library Page header')).toBeInTheDocument()
   })
