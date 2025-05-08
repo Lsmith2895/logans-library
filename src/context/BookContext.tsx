@@ -44,4 +44,4 @@ function useBookContext(){
     return context
 }
 
-export { BookProvider, useBookContext}
+export { BookProvider, useBookContext, BookContext}

@@ -7,6 +7,12 @@ type GoogleBookResponse = {
 type GoogleBook = {
     id: string;
     volumeInfo: VolumeInfo;
+    kind: string;
+    etag: string;
+    selfLink: string;
+    saleInfo: {};
+    accessInfo: {};
+    searchInfo: {};
 }
 
 type VolumeInfo = {
@@ -16,10 +22,19 @@ type VolumeInfo = {
     description?: string;
     publisher?: string;
     publishedDate?: string;
+    readingModes: {};
+    printType: string;
     imageLinks?: {
         smallThumbnail: string;
         thumbnail?: string;
     };
+    maturityRating:string;
+    allowAnonLogging: boolean;
+    contentVersion: string;
+    panelizationSummary:{};
+    previewLink: string;
+    infoLink: string;
+    canonicalVolumeLink: string;
     industryIdentifiers?:{}[];
     pageCount?: number;
     categories?: string[];
