@@ -1,9 +1,22 @@
 import {render, screen } from '@testing-library/react'
 import App from './App';
+import { MemoryRouter } from 'react-router-dom';
+import { BookProvider } from './context/BookContext';
 
+jest.mock('./utils/getGoogleBooksApiKey', () => ({
+  getGoogleBooksApiKey: () => 'test-key',
+}));
 
-test('renders heading', () => {
-    render(<App />);
-    const testHeading = screen.getByText('TAILWINDS TEST');
-    expect(testHeading).toBeDefined();
-  });
+describe("App", () => {
+  it('renders navigation and pages', async () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <BookProvider>
+          <App />
+        </BookProvider>
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Raw data page')).toBeInTheDocument();
+  })
+})
