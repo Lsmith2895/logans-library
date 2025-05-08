@@ -12,12 +12,25 @@ function SearchBar(){
 
     return (
         <form onSubmit={handleSearch}>
-            <input 
+            <input
+                type="text"
+                inputMode="numeric"
+                pattern="\d{1,13}"
+                maxLength={13}
                 value={state.searchTerm}
+                placeholder="Search For Books by ISBN"
                 onChange={(e) => {
                     dispatch({type: 'SET_SEARCH', payload: e.target.value})
                 }}
-                placeholder="Search For Books by ISBN"
+                onInvalid={(e) => (
+                    (e.target as HTMLInputElement)
+                        .setCustomValidity('Please enter a 10 or 13-digit ISBN')
+                )}
+                onInput={(e) => {
+                    (e.target as HTMLInputElement)
+                        .setCustomValidity('')
+                }}
+
             />
             <button> Search </button>
         </form>
