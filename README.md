@@ -54,14 +54,14 @@ You can get a key from [Google Books API](https://developers.google.com/books/do
 
 ## 📦 Scripts
 
-| Command            | Description                     |
-|--------------------|---------------------------------|
-| `npm run dev`      | Start development server        |
-| `npm run build`    | Build for production            |
-| `npm run preview`  | Preview production build        |
-| `npm run lint`     | Run ESLint                      |
-| `npm run format`   | Format with Prettier            |
-| `npm run test`     | Run Jest unit tests             |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
+| `npm run format`  | Format with Prettier     |
+| `npm run test`    | Run Jest unit tests      |
 
 ---
 
