@@ -1,54 +1,96 @@
-# React + TypeScript + Vite
+# Logan's Library 📚
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Logan's Library is a React + TypeScript + VITE application that allows users to search for books by ISBN using the Google Books API. It features both a raw JSON view and a styled library view.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19**
+- **TypeScript**
+- **Vite** (for fast dev builds)
+- **Tailwind CSS**
+- **React Router DOM v7**
+- **Axios**
+- **Jest** + **React Testing Library** for unit tests
+- **ESLint** + **Prettier** for linting & formatting
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## 🚀 Getting Started
+
+### 1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/logans-library.git
+cd logans-library
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. **Install dependencies**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm install
 ```
+
+### 3. **Set up environment variables**
+
+Create a `.env` file in the root:
+
+```env
+VITE_GOOGLE_BOOKS_API_KEY=your_api_key_here
+```
+
+You can get a key from [Google Books API](https://developers.google.com/books/docs/v1/using#APIKey).
+
+---
+
+## 💻 Requirements
+
+- **Node.js** 18+
+- **npm** 9+ or **pnpm**
+- Internet access for API requests
+
+---
+
+## 📦 Scripts
+
+| Command            | Description                     |
+|--------------------|---------------------------------|
+| `npm run dev`      | Start development server        |
+| `npm run build`    | Build for production            |
+| `npm run preview`  | Preview production build        |
+| `npm run lint`     | Run ESLint                      |
+| `npm run format`   | Format with Prettier            |
+| `npm run test`     | Run Jest unit tests             |
+
+---
+
+## 🧪 Testing
+
+Tests are written using:
+
+- `@testing-library/react`
+- `jest`
+- `axios-mock-adapter` (for mocking Google Books API)
+
+Run tests with:
+
+```bash
+npm run test
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork this repo
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make changes and commit
+4. Lint and Format
+5. Open a pull request and fill out the description to let us know the changes you made
+
+---
+
+## 📄 License
+
+MIT — free for personal or commercial use.
