@@ -1,9 +1,11 @@
 import axios from "axios"
 import type { GoogleBookResponse } from "../types/book";
+import { getGoogleBooksApiKey } from "../utils/getGoogleBooksApiKey";
 
 
 async function getBookByISBN(isbn: string): Promise<GoogleBookResponse | null> {
-    const apiKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
+  const apiKey = getGoogleBooksApiKey();
+
     const BASE_URL = 'https://www.googleapis.com/books/v1/volumes';
     
     try {
