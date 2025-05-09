@@ -17,24 +17,19 @@ function BookCard({ book }: BookCardProps) {
   const author = authors[0] ?? 'Unknown';
 
   return (
-    <>
-      <div className="m-4 rounded-3xl bg-gray-950 px-1 py-4">
-        <div className="flex">
-          <img className="object-contain p-3" src={imageUrl} alt={`Cover of ${title}`} />
-          <div>
-            <h1 className="text-2xl font-medium">{title}</h1>
-            <div> {subtitle}</div>
-            <div className="text-[#b4e300]">
-              {' '}
-              Author: <span className="text-white">{author}</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p className="overflow-hidden pt-6 font-extralight">{textSnippet}</p>
+    <div className="m-4 rounded-3xl bg-gray-900 px-1 py-4">
+      <div className="flex">
+        <img className="object-contain p-3" src={imageUrl} alt={`Cover of ${title}`} />
+        <div className="flex flex-col justify-between">
+          <h1 className="text-2xl font-medium">{title}</h1>
+          <h2 className="text-[#b4e300]">
+            Author: <span className="text-white">{author}</span>
+          </h2>
+          <div> {subtitle}</div>
         </div>
       </div>
-    </>
+      <div className="overflow-hidden pt-6 font-extralight">{textSnippet}</div>
+    </div>
   );
 }
 
