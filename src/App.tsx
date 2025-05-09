@@ -12,7 +12,7 @@ function App() {
         <NavBar />
         <SearchBar />
         <Routes>
-          <Route path='/' element={<HomePage />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/raw" element={<RawDataPage />} />
           <Route path="/library" element={<LibraryPage />} />
         </Routes>
