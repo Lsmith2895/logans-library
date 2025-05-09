@@ -6,9 +6,7 @@ function LibraryPage() {
   const books = state.rawBook?.items;
 
   if (!books) {
-    return (
-      <div> no books found</div>
-    )
+    return <div> no books found</div>;
   }
   return (
     <>
