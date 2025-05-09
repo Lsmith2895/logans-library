@@ -7,3 +7,27 @@ body {
   color: white;
   font-family: 'Space Grotesk', sans-serif;
 }
+
+.card-gradient {
+  background: #0c0c7a;
+  background: linear-gradient(
+    50deg,
+    rgba(12, 12, 122, 1) 0%,
+    rgba(1, 1, 77, 1) 22%,
+    rgba(57, 54, 217, 1) 61%,
+    rgba(111, 179, 110, 1) 81%,
+    rgba(237, 221, 83, 1) 93%
+  );
+}
+
+.card-title {
+  background: linear-gradient(
+    50deg,
+    rgba(0, 128, 79, 1) 0%,
+    rgba(10, 208, 247, 1) 16%,
+    rgba(111, 179, 110, 1) 70%,
+    rgba(224, 156, 18, 1) 84%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
