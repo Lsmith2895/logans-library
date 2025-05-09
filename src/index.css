@@ -1,1 +1,9 @@
+@import '@fontsource/space-grotesk/latin.css';
+
 @import 'tailwindcss';
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+}
