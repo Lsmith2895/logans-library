@@ -5,7 +5,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex h-30 items-center justify-between bg-black p-4 px-10 text-[#b4e300]">
+    <nav className="mb-4 flex h-30 items-center justify-between border-b bg-black p-4 px-10 text-[#b4e300]">
       <div className="flex items-center">
         <img src="../public/SquareLogo.png" className="w-10" aria-label="logo" />
         <Link to="/">
