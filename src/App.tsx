@@ -3,6 +3,7 @@ import { RawDataPage } from './pages/RawDataPage';
 import { LibraryPage } from './pages/LibraryPage';
 import { SearchBar } from './components/SearchBar';
 import { NavBar } from './components/NavBar';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <NavBar />
         <SearchBar />
         <Routes>
-          <Route path="/" element={<RawDataPage />} />
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path="/raw" element={<RawDataPage />} />
           <Route path="/library" element={<LibraryPage />} />
         </Routes>
       </div>
