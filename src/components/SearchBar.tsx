@@ -11,7 +11,7 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch} className="p-4">
+    <form onSubmit={handleSearch} className="p-4 flex justify-end sm:justify-start">
       <input
         className="rounded-4xl border-2 border-zinc-700 p-2 pl-4 outline-[#b4e300]"
         type="text"
@@ -32,8 +32,14 @@ function SearchBar() {
           (e.target as HTMLInputElement).setCustomValidity('');
         }}
       />
-      <button className="ml-6 rounded-3xl border-2 border-[#b4e300] p-2 px-4">
+      {/* Desktop search button */}
+      <button className="ml-6 hidden rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
         Find Book By ISBN
+      </button>
+
+      {/* mobile search button */}
+      <button className="ml-6 rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 inline md:hidden">
+        <img src="./public/search.svg" className="h-5" />
       </button>
     </form>
   );
