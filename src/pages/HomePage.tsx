@@ -3,7 +3,7 @@ import { RawJsonCard } from '../components/RawJsonCard';
 
 function HomePage() {
   return (
-    <div className="p-4 md:max-w-5/6">
+    <div className="p-4 max-w-5xl">
       <RawJsonCard />
       <HowToGuide />
 
