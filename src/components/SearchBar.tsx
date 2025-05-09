@@ -11,7 +11,7 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch} className="p-4 flex justify-end sm:justify-start">
+    <form onSubmit={handleSearch} className="flex justify-end p-4 sm:justify-start">
       <input
         className="rounded-4xl border-2 border-zinc-700 p-2 pl-4 outline-[#b4e300]"
         type="text"
@@ -38,7 +38,7 @@ function SearchBar() {
       </button>
 
       {/* mobile search button */}
-      <button className="ml-6 rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 inline md:hidden">
+      <button className="ml-6 inline rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
         <img src="./public/search.svg" className="h-5" />
       </button>
     </form>
