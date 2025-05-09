@@ -20,17 +20,16 @@ function BookCard({ book }: BookCardProps) {
       <div className="m-4 rounded-3xl bg-gray-900 px-1 py-4 ">
         <div className="flex">
           <img className="object-contain p-3" src={imageUrl} alt={`Cover of ${title}`} />
-          <div>
+          <div className='flex flex-col justify-between'>
             <h1 className="text-2xl font-medium">{title}</h1>
-            <div> {subtitle}</div>
-            <div className="text-[#b4e300]">
-              {' '}
+            <h2 className="text-[#b4e300]">
               Author: <span className="text-white">{author}</span>
-            </div>
+            </h2>
+            <div> {subtitle}</div>
           </div>
         </div>
-        <div>
-          <p className="overflow-hidden pt-6 font-extralight">{textSnippet}</p>
+        <div className="overflow-hidden pt-6 font-extralight">
+          {textSnippet}
         </div>
       </div>
   );
