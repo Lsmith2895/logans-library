@@ -1,19 +1,19 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { RawDataPage } from './pages/RawDataPage';
 import { LibraryPage } from './pages/LibraryPage';
 import { SearchBar } from './components/SearchBar';
+import { NavBar } from './components/NavBar';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
     <>
-      <div className="p-4">
-        <nav className="bg-blue-900 text-white flex space-x-10 p-4">
-          <Link to="/">Raw data page</Link>
-          <Link to="/library"> Library Page</Link>
-        </nav>
+      <div className="min-h-screen bg-black text-white">
+        <NavBar />
         <SearchBar />
         <Routes>
-          <Route path="/" element={<RawDataPage />} />
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/raw" element={<RawDataPage />} />
           <Route path="/library" element={<LibraryPage />} />
         </Routes>
       </div>

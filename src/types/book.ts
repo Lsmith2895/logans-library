@@ -12,7 +12,9 @@ type GoogleBook = {
   selfLink: string;
   saleInfo: {};
   accessInfo: {};
-  searchInfo: {};
+  searchInfo: {
+    textSnippet: string;
+  };
 };
 
 type VolumeInfo = {
