@@ -8,7 +8,7 @@ function RawJsonCard() {
   return (
     <Link to="/raw">
       <div className="my-4 h-96 max-w-full rounded-3xl bg-gray-950 p-6 sm:mx-6">
-        <h1 className="p-3 text-4xl">Raw JSON</h1>
+        <h1 className="p-3 text-4xl font-semibold">RAW JSON</h1>
         <div className="h-5/6 pt-5">
           <Editor
             theme="vs-dark"
