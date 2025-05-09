@@ -11,7 +11,7 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form onSubmit={handleSearch} className='p-4'>
       <input
         type="text"
         inputMode="numeric"
