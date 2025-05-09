@@ -6,10 +6,14 @@ import { SearchBar } from './components/SearchBar';
 function App() {
   return (
     <>
-      <div className="p-4">
-        <nav className="bg-blue-900 text-white flex space-x-10 p-4">
-          <Link to="/">Raw data page</Link>
-          <Link to="/library"> Library Page</Link>
+      <div>
+        <nav className="flex h-30 items-center space-x-10 bg-black p-4 text-white">
+          <div className="flex items-center">
+            <img src="../public/SquareLogo.png" className="w-10" />
+            <div className="font-extrabold text-4xl">Fallibilism</div>
+          </div>
+          <Link to="/" className='text-xl'>Raw Book</Link>
+          <Link to="/library" className='text-xl'>Pretty Book</Link>
         </nav>
         <SearchBar />
         <Routes>
