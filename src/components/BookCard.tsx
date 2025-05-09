@@ -17,8 +17,7 @@ function BookCard({ book }: BookCardProps) {
   const author = authors[0] ?? 'Unknown';
 
   return (
-    <>
-      <div className="m-4 rounded-3xl bg-gray-950 px-1 py-4">
+      <div className="m-4 rounded-3xl bg-gray-900 px-1 py-4 ">
         <div className="flex">
           <img className="object-contain p-3" src={imageUrl} alt={`Cover of ${title}`} />
           <div>
@@ -34,7 +33,6 @@ function BookCard({ book }: BookCardProps) {
           <p className="overflow-hidden pt-6 font-extralight">{textSnippet}</p>
         </div>
       </div>
-    </>
   );
 }
 
