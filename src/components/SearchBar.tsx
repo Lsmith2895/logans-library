@@ -33,8 +33,7 @@ function SearchBar() {
         }}
       />
       <button className="ml-6 rounded-3xl border-2 border-[#b4e300] p-2 px-4">
-        {' '}
-        Find Book By ISBN{' '}
+        Find Book By ISBN
       </button>
     </form>
   );
