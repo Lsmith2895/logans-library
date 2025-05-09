@@ -13,6 +13,7 @@ function SearchBar() {
   return (
     <form onSubmit={handleSearch} className="p-4">
       <input
+        className="rounded-4xl border-2 border-zinc-700 p-2 pl-4 outline-[#b4e300]"
         type="text"
         inputMode="numeric"
         pattern="\d{1,13}"
@@ -31,7 +32,10 @@ function SearchBar() {
           (e.target as HTMLInputElement).setCustomValidity('');
         }}
       />
-      <button> Search </button>
+      <button className="ml-6 rounded-3xl border-2 border-[#b4e300] p-2 px-4">
+        {' '}
+        Find Book By ISBN{' '}
+      </button>
     </form>
   );
 }
