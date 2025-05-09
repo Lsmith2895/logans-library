@@ -8,7 +8,9 @@ function NavBar() {
     <nav className="flex h-30 items-center justify-between bg-black p-4 px-10 text-[#b4e300]">
       <div className="flex items-center">
         <img src="../public/SquareLogo.png" className="w-10" aria-label="logo" />
-        <div className="text-4xl font-extrabold text-white">Fallibilism</div>
+        <Link to="/">
+          <div className="text-4xl font-extrabold text-white">Fallibilism</div>
+        </Link>
       </div>
 
       {/* Hamburger Button */}
