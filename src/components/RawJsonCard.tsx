@@ -1,0 +1,29 @@
+import { Editor } from '@monaco-editor/react';
+import { useBookContext } from '../context/BookContext';
+
+function RawJsonCard() {
+    const { state } = useBookContext();
+
+  return (
+    <div className="mx-4 my-4 h-96 max-w-full rounded-3xl bg-gray-950 sm:mx-6 p-6">
+      <h1 className="p-3 text-4xl">Raw JSON</h1>
+      <div className="h-5/6 pt-5">
+        <Editor
+          theme="vs-dark"
+          language="json"
+          defaultValue={JSON.stringify(state.rawBook, null, 2)}
+          options={{
+            minimap: { enabled: false },
+            stickyScroll: { enabled: false },
+            fontSize: 12,
+            wordWrap: "on",
+            scrollBeyondLastLine: false,
+            lineNumbers: 'off',
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export { RawJsonCard };
