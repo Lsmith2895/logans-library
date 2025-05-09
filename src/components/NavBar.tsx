@@ -21,7 +21,7 @@ function NavBar() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="absolute right-0 mt-4 flex w-36 flex-col bg-black p-4 text-lg md:hidden">
-            <Link to="/" onClick={() => setMenuOpen(false)} className="p-2">
+            <Link to="/raw" onClick={() => setMenuOpen(false)} className="p-2">
               {' '}
               Raw Book{' '}
             </Link>
@@ -36,7 +36,7 @@ function NavBar() {
 
       {/* DeskTop Menu */}
       <div className="hidden space-x-4 text-xl md:flex">
-        <Link to="/">Raw Book</Link>
+        <Link to="/raw">Raw Book</Link>
         <Link to="/library">Pretty Book</Link>
       </div>
     </nav>
