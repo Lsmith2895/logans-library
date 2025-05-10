@@ -1,6 +1,6 @@
 function HowToGuide() {
   return (
-    <div className="max-w-7xl p-4 m-10 md:m-20 rounded-3xl bg-amber-100 shadow-lg">
+    <div className="m-10 max-w-7xl rounded-3xl bg-amber-100 p-4 shadow-lg md:m-20">
       <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">How to Search Books by ISBN</h1>
       <h3 className="mt-2 text-lg text-gray-700">Find any book using the barcode on the back</h3>
 
@@ -9,21 +9,18 @@ function HowToGuide() {
           <ol className="list-decimal space-y-2 pl-6 text-gray-800">
             <li>Get a physical book from your library</li>
             <li>Find the barcode on the back of the book</li>
-                      <li>Type the barcode into the search bar</li>
-                      <li>Navigate to the raw or pretty book via the menu</li>
+            <li>Type the barcode into the search bar</li>
+            <li>Navigate to the raw or pretty book via the menu</li>
           </ol>
 
           <div className="mt-6 text-gray-700">
-            <p className="mb-2 font-bold text-2xl">
-              try these to explore the app&apos;s
-              features:
-            </p>
-              <div className="font-mono text-black">
+            <p className="mb-2 text-2xl font-bold">try these to explore the app&apos;s features:</p>
+            <div className="font-mono text-black">
               <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
-              <p>
-                <strong>Single Book:</strong> 9781501184161
-              </p>
-              </div>                   
+                <p>
+                  <strong>Single Book:</strong> 9781501184161
+                </p>
+              </div>
 
               <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
                 <p>
