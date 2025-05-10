@@ -1,8 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <nav className="mb-4 flex h-20 items-center justify-between border-b bg-black p-4 px-10 text-[#b4e300]">
@@ -14,8 +31,10 @@ function NavBar() {
       </div>
 
       {/* Hamburger Button */}
+      <div className='relative md:hidden' ref={menuRef}>
       <button
-        className="relative focus:outline-none md:hidden"
+        className=" focus:outline-none "
+        
         onClick={() => setMenuOpen(prev => !prev)}
         type="button"
       >
@@ -31,7 +50,8 @@ function NavBar() {
             </Link>
           </div>
         )}
-      </button>
+        </button>
+        </div>
       {/*  */}
 
       {/* DeskTop Menu */}
@@ -44,5 +64,3 @@ function NavBar() {
 }
 
 export { NavBar };
-
-//  <div className='absolute flex flex-col mt-4 md:hidden right-5 w-24 bg-blue-700'>
