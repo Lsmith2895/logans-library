@@ -1,13 +1,12 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useReducer,
   type Dispatch,
   type ReactNode,
 } from 'react';
 import type { GoogleBookResponse } from '../types/book';
-import { getBookByISBN } from '../api/googleBooks';
+// import { getBookByISBN } from '../api/googleBooks';
 
 type State = {
   rawBook: GoogleBookResponse | null;
@@ -37,15 +36,15 @@ function reducer(state: State, action: Action): State {
 function BookProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, { rawBook: null, searchTerm: '' });
 
-  useEffect(() => {
-    const defaultISBN = '9781501184161';
-    getBookByISBN(defaultISBN).then(book => {
-      if (book) {
-        dispatch({ type: 'SET_BOOK', payload: book });
-        dispatch({ type: 'SET_SEARCH', payload: defaultISBN });
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   const defaultISBN = '9781501184161';
+  //   getBookByISBN(defaultISBN).then(book => {
+  //     if (book) {
+  //       dispatch({ type: 'SET_BOOK', payload: book });
+  //       dispatch({ type: 'SET_SEARCH', payload: defaultISBN });
+  //     }
+  //   });
+  // }, []);
 
   return <BookContext.Provider value={{ state, dispatch }}>{children}</BookContext.Provider>;
 }
