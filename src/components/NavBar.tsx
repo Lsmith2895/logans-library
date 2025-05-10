@@ -5,7 +5,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="mb-4 flex h-30 items-center justify-between border-b bg-black p-4 px-10 text-[#b4e300]">
+    <nav className="mb-4 flex h-20 items-center justify-between border-b bg-black p-4 px-10 text-[#b4e300]">
       <div className="flex items-center">
         <img src="../public/SquareLogo.png" className="w-10" aria-label="logo" />
         <Link to="/">
@@ -22,14 +22,12 @@ function NavBar() {
         <img src="../public/menu.svg" className="h-6 w-6" />
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="absolute right-0 mt-4 flex w-36 flex-col bg-black p-4 text-lg md:hidden">
+          <div className="absolute right-0 mt-4 flex w-36 flex-col rounded-2xl border border-gray-700 bg-black p-4 text-lg md:hidden">
             <Link to="/raw" onClick={() => setMenuOpen(false)} className="p-2">
-              {' '}
-              Raw Book{' '}
+              Raw Book
             </Link>
             <Link to="/library" className="p-2" onClick={() => setMenuOpen(false)}>
-              {' '}
-              Pretty Book{' '}
+              Pretty Book
             </Link>
           </div>
         )}
