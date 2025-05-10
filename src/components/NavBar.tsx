@@ -26,7 +26,7 @@ function NavBar() {
       <div className="flex items-center">
         <img src="../public/SquareLogo.png" className="w-10" aria-label="logo" />
         <Link to="/">
-          <div className="text-4xl font-extrabold text-white">Fallibilism</div>
+          <div className=" text-2xl md:text-4xl font-extrabold text-white">Fallibilism</div>
         </Link>
       </div>
 
