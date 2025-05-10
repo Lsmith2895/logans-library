@@ -32,7 +32,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-
 .gradient-text {
   background: linear-gradient(200deg, #b4e300, #00ffd0, #b4e300);
   background-size: 600% 600%;
@@ -52,4 +51,3 @@ body {
     background-position: 0% 50%;
   }
 }
-
