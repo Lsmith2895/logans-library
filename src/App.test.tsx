@@ -39,7 +39,5 @@ describe('App', () => {
     userEvent.click(screen.getByText('Fallibilism'));
     expect(await screen.findByText(/Question/i)).toBeInTheDocument();
     expect(await screen.findByText(/How-to Guide/i)).toBeInTheDocument();
-
   });
-
 });
