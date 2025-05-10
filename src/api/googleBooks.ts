@@ -9,10 +9,15 @@ async function getBookByISBN(isbn: string): Promise<GoogleBookResponse | null> {
   const BASE_URL = 'https://www.googleapis.com/books/v1/volumes';
 
   try {
-    const res = await axios.get(`${BASE_URL}?q=isbn:${isbn}&key=${apiKey}`);
+    const res = await axios.get(BASE_URL, {
+      params: {
+        q: `isbn:${isbn}`,
+        key: apiKey,
+      },
+    });
     return res.data;
   } catch (e) {
-    console.error('Error fetching book:', e);
+    console.error(`Error fetching book with this ISBN:${isbn}`, e);
     return null;
   }
 }
