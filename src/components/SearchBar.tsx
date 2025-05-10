@@ -34,7 +34,7 @@ function SearchBar() {
       />
       {/* Desktop search button */}
       <button className="ml-6 hidden rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
-        Find Book By ISBN
+        Find Books By ISBN
       </button>
 
       {/* mobile search button */}
