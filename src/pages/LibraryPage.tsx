@@ -1,12 +1,13 @@
 import { BookCard } from '../components/BookCard';
 import { useBookContext } from '../context/BookContext';
+import { HowToGuide } from './HowToGuide';
 
 function LibraryPage() {
   const { state } = useBookContext();
   const books = state.rawBook?.items;
 
   if (!books) {
-    return <div> no books found</div>;
+    return <HowToGuide />;
   }
 
   return (
