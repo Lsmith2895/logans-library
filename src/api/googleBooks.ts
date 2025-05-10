@@ -3,7 +3,6 @@ import type { GoogleBookResponse } from '../types/book';
 import { getGoogleBooksApiKey } from '../utils/getGoogleBooksApiKey';
 
 async function getBookByISBN(isbn: string): Promise<GoogleBookResponse | null> {
-
   // See getGoogleBooksApiKey for why we didn't use import.meta here
   const apiKey = getGoogleBooksApiKey();
 
@@ -13,8 +12,8 @@ async function getBookByISBN(isbn: string): Promise<GoogleBookResponse | null> {
     const res = await axios.get(BASE_URL, {
       params: {
         q: `isbn:${isbn}`,
-        key: apiKey 
-      }
+        key: apiKey,
+      },
     });
     return res.data;
   } catch (e) {
