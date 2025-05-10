@@ -14,7 +14,9 @@ function HowToGuide() {
           </ol>
 
           <div className="mt-6 text-gray-700">
-            <p className="mb-2 text-2xl font-bold">try these to explore the app&apos;s features:</p>
+            <p className="mb-2 text-2xl font-bold">
+              Don&apos;t have any books handy – try these to explore the app&apos;s features:
+            </p>
             <div className="font-mono text-black">
               <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
                 <p>
