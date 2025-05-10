@@ -19,6 +19,7 @@ function HomePage() {
 
       <HowToCard />
 
+      {/* TODO placeholders for upcoming features */}
       <div> pretty book preview</div>
 
       <div> recent book preview</div>

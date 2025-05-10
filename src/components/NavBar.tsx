@@ -5,6 +5,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
+  // This effect helps close the menu if the user clicks outside of it
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -51,7 +52,6 @@ function NavBar() {
           )}
         </button>
       </div>
-      {/*  */}
 
       {/* DeskTop Menu */}
       <div className="hidden space-x-4 text-xl md:flex">

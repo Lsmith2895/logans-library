@@ -30,6 +30,10 @@ function reducer(state: State, action: Action): State {
 function BookProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, { rawBook: null, searchTerm: '' });
 
+  // This functionality automatically searches for a book
+  // useful for dev environment
+  // where you don't want to search a book every time the page is reloaded
+
   // useEffect(() => {
   //   const defaultISBN = '9781501184161';
   //   getBookByISBN(defaultISBN).then(book => {
