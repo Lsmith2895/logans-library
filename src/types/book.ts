@@ -1,5 +1,5 @@
 type GoogleBookResponse = {
-  items: GoogleBook[];
+  items?: GoogleBook[];
   kind: string;
   totalItems: number;
 };
@@ -12,7 +12,7 @@ type GoogleBook = {
   selfLink: string;
   saleInfo: {};
   accessInfo: {};
-  searchInfo: {
+  searchInfo?: {
     textSnippet: string;
   };
 };
@@ -41,6 +41,8 @@ type VolumeInfo = {
   pageCount?: number;
   categories?: string[];
   language?: string;
+  averageRating?: number;
+  ratingsCount?: number;
 };
 
 export type { GoogleBookResponse, GoogleBook };
