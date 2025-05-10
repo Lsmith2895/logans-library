@@ -4,6 +4,7 @@ import { LibraryPage } from './pages/LibraryPage';
 import { SearchBar } from './components/SearchBar';
 import { NavBar } from './components/NavBar';
 import { HomePage } from './pages/HomePage';
+import { HowToGuide } from './pages/HowToGuide';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/raw" element={<RawDataPage />} />
           <Route path="/library" element={<LibraryPage />} />
+          <Route path="/guide" element={<HowToGuide />} />
         </Routes>
       </div>
     </>
