@@ -9,7 +9,7 @@ import prettier from 'eslint-config-prettier';
 
 export default defineConfig([
   {
-    ignores: ['**/*.test.ts', '**/*.test.tsx', '**/__tests__/**'],
+    ignores: ['**/*.test.ts', '**/*.test.tsx', '**/__tests__/**', 'coverage/**'],
   },
   {
     files: ['src/**/*.{js,ts,jsx,tsx}'],
