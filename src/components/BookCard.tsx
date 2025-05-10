@@ -5,6 +5,7 @@ type BookCardProps = {
 };
 
 function BookCard({ book }: BookCardProps) {
+  // Check to see if there is book state and set these variables
   const {
     title = 'Unknown title',
     subtitle = '',
