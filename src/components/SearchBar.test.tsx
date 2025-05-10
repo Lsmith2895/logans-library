@@ -5,7 +5,11 @@ import App from '../App';
 import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import { singleBookResponse } from '../__mocks__/mockGoogleApiResponses';
+import {
+  multipleBooksResponse,
+  noBooksResponse,
+  singleBookResponse,
+} from '../__mocks__/mockGoogleApiResponses';
 
 const mock: MockAdapter = new MockAdapter(axios);
 
@@ -50,7 +54,7 @@ describe('SearchBar', () => {
   });
 
   //full happy path
-  it('fetches and displays book JSON with real ISBN', async () => {
+  it('fetches and displays single book', async () => {
     mock
       .onGet('https://www.googleapis.com/books/v1/volumes', {
         params: {
@@ -71,6 +75,60 @@ describe('SearchBar', () => {
       expect(screen.getByText(/The Right Kind of Crazy/i)).toBeInTheDocument();
       // Author
       expect(screen.getByText(/Clint Emerson/i)).toBeInTheDocument();
+    });
+  });
+
+  it('fetches and displays multiple books', async () => {
+    mock
+      .onGet('https://www.googleapis.com/books/v1/volumes', {
+        params: {
+          q: 'isbn:1111111111',
+          key: 'test-key',
+        },
+      })
+      .reply(200, multipleBooksResponse);
+
+    // Enter a valid ISBN and submit
+    await userEvent.click(screen.getByRole('link', { name: /raw book/i }));
+    await userEvent.type(searchInputBox, '1111111111');
+    await userEvent.click(submitButton);
+
+    // Check that the raw book data is on the page
+    await waitFor(() => {
+      //Book 1
+      // Title
+      expect(screen.getByText(/A Nature Wooing at Ormond by the Sea/i)).toBeInTheDocument();
+      // Author
+      expect(screen.getByText(/Willis Stanley Blatchley/i)).toBeInTheDocument();
+
+      //Book 2
+      // Title
+      expect(screen.getByText(/Microéconomie/i)).toBeInTheDocument();
+      // Author
+      expect(screen.getByText(/Franck Bien/i)).toBeInTheDocument();
+    });
+  });
+
+  //update me
+  it('fetches and displays no books with valid response', async () => {
+    mock
+      .onGet('https://www.googleapis.com/books/v1/volumes', {
+        params: {
+          q: 'isbn:11112111111',
+          key: 'test-key',
+        },
+      })
+      .reply(200, noBooksResponse);
+
+    // Enter a valid ISBN and submit
+    await userEvent.click(screen.getByRole('link', { name: /raw book/i }));
+    await userEvent.type(searchInputBox, '11112111111');
+    await userEvent.click(submitButton);
+
+    // Check that the raw book data is on the page
+    await waitFor(() => {
+      // No books
+      expect(screen.getByText(/"totalItems": 0/i)).toBeInTheDocument();
     });
   });
 });
