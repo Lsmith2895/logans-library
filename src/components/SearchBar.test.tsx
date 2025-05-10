@@ -27,7 +27,7 @@ describe('SearchBar', () => {
     );
 
     searchInputBox = screen.getByPlaceholderText('Search For Books by ISBN');
-    submitButton = screen.getByRole('button', { name: 'Search' });
+    submitButton = screen.getByRole('button', { name: 'Find Book By ISBN' });
   });
 
   afterEach(async () => {
@@ -135,10 +135,16 @@ describe('SearchBar', () => {
     };
 
     mock
-      .onGet(/https:\/\/www\.googleapis\.com\/books\/v1\/volumes\?q=isbn:\d{10,13}&key=\w+/)
+      .onGet('https://www.googleapis.com/books/v1/volumes', {
+        params: {
+          q: 'isbn:9781501184161',
+          key: 'test-key',
+        },
+      })
       .reply(200, mockData);
 
     // Enter a valid ISBN and submit
+    await userEvent.click(screen.getByRole('link', { name: /raw book/i }));
     await userEvent.type(searchInputBox, '9781501184161');
     await userEvent.click(submitButton);
 

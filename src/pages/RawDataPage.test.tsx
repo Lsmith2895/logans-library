@@ -13,7 +13,7 @@ describe('Raw Data Page', () => {
       </BookContext.Provider>
     );
 
-    expect(screen.getByText(/home page how to guide/i)).toBeInTheDocument();
+    expect(screen.getByText(/How to Search Books by ISBN/i)).toBeInTheDocument();
   });
 
   it('shows JSON when a rawBook is present', () => {

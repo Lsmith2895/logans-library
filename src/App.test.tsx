@@ -9,7 +9,7 @@ jest.mock('./utils/getGoogleBooksApiKey', () => ({
 }));
 
 describe('App', () => {
-  it('renders navigation and pages', async () => {
+  it('renders navigation and pages with no book', async () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <BookProvider>
@@ -18,14 +18,17 @@ describe('App', () => {
       </MemoryRouter>
     );
     // Check navbar exists
-    expect(screen.getByText('Raw data page')).toBeInTheDocument();
-    expect(screen.getByText('Library Page')).toBeInTheDocument();
+    expect(screen.getByText('Raw Book')).toBeInTheDocument();
+    expect(screen.getByText('Pretty Book')).toBeInTheDocument();
 
     // Check searchbar exists
     expect(screen.getByPlaceholderText('Search For Books by ISBN')).toBeInTheDocument();
 
+    //Check Raw JSON is not there
+    expect(screen.queryByText('RAW JSON')).not.toBeInTheDocument();
+
     // Navigate to library page
-    userEvent.click(screen.getByText('Library Page'));
-    expect(await screen.findByText('Library Page header')).toBeInTheDocument();
+    userEvent.click(screen.getByText('Pretty Book'));
+    expect(await screen.findByText('How to Search Books by ISBN')).toBeInTheDocument();
   });
 });
