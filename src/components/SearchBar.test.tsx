@@ -51,8 +51,6 @@ describe('SearchBar', () => {
 
   //full happy path
   it('fetches and displays book JSON with real ISBN', async () => {
-    const mockData = singleBookResponse;
-
     mock
       .onGet('https://www.googleapis.com/books/v1/volumes', {
         params: {
@@ -60,7 +58,7 @@ describe('SearchBar', () => {
           key: 'test-key',
         },
       })
-      .reply(200, mockData);
+      .reply(200, singleBookResponse);
 
     // Enter a valid ISBN and submit
     await userEvent.click(screen.getByRole('link', { name: /raw book/i }));
