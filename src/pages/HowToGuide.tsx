@@ -3,7 +3,7 @@ import { Animate } from '../components/Animate';
 function HowToGuide() {
   return (
     <Animate>
-      <div className="m-10 max-w-7xl rounded-3xl bg-amber-100 p-4 shadow-lg md:m-20">
+      <div className="my-10 max-w-7xl rounded-3xl bg-amber-100 p-4 shadow-lg md:m-20">
         <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">
           How to Search Books by ISBN
         </h1>
