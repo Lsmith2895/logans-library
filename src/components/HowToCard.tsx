@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function HowToCard() {
   return (
-    <div className="card-gradient my-9 flex  max-w-full rounded-3xl p-4 md:my-28">
+    <div className="card-gradient my-9 flex max-w-full rounded-3xl p-4 md:my-28">
       <div className="w-2/3 py-2 md:px-6 md:py-14">
         <div className="card-title text-4xl font-black md:text-7xl"> How-To Guide</div>
         <p className="pt-2 md:pt-8 md:text-3xl">

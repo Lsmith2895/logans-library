@@ -36,6 +36,11 @@ function HowToGuide() {
                   </p>
                 </div>
                 <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
+                  <p>
+                    <strong>Book With No Thumbnail:</strong> 0671708635
+                  </p>
+                </div>
+                <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
                   <p className="text-base text-gray-800">
                     <strong>No Books:</strong> <span className="font-mono">11112111111</span>
                   </p>
@@ -64,3 +69,5 @@ function HowToGuide() {
 }
 
 export { HowToGuide };
+
+// 0671708635
