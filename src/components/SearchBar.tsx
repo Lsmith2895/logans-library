@@ -1,13 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import { getBookByISBN } from '../api/googleBooks';
 import { useBookContext } from '../context/BookContext';
 
 function SearchBar() {
   const { state, dispatch } = useBookContext();
+  const navigate = useNavigate();
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     const book = await getBookByISBN(state.searchTerm);
     dispatch({ type: 'SET_BOOK', payload: book });
+
+    navigate('/library');
   };
 
   return (
