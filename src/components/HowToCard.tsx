@@ -9,7 +9,7 @@ function HowToCard() {
           Learn how to search for books by ISBN with these simple steps.
         </p>
         <Link to={'/guide'}>
-          <button className="mt-6 rounded-3xl border-2 border-[#b4e300] bg-[#b4e300] px-6 py-2 font-extrabold text-black">
+          <button className="mt-6 cursor-pointer rounded-3xl border-2 border-[#b4e300] bg-[#b4e300] px-6 py-2 font-extrabold text-black">
             Start Searching
           </button>
         </Link>

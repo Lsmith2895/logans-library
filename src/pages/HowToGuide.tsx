@@ -1,6 +1,24 @@
+import { useLocation, useNavigate } from 'react-router-dom';
+import { getBookByISBN } from '../api/googleBooks';
 import { Animate } from '../components/Animate';
+import { useBookContext } from '../context/BookContext';
 
+// This file is very WET! It is intended only to show off the use cases quickly to the dev team
 function HowToGuide() {
+  const { dispatch } = useBookContext();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const searchAndSetBook = async (isbn: string) => {
+    dispatch({ type: 'SET_SEARCH', payload: isbn });
+    const book = await getBookByISBN(isbn);
+    dispatch({ type: 'SET_BOOK', payload: book });
+
+    if (location.pathname.includes('guide')) {
+      navigate('/library');
+    }
+  };
+
   return (
     <Animate>
       <div className="my-10 max-w-7xl rounded-3xl bg-amber-100 p-4 shadow-lg md:m-20">
@@ -22,25 +40,48 @@ function HowToGuide() {
               <p className="mb-2 text-2xl font-bold">
                 Don&apos;t have any books handy – try these to explore the app&apos;s features:
               </p>
-              <div className="font-mono text-black">
-                <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
+
+              <div className="flex flex-col font-mono text-black">
+                <button
+                  className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  onClick={() => {
+                    searchAndSetBook('9781501184161');
+                  }}
+                >
                   <p>
                     <strong>Single Book:</strong> 9781501184161
                   </p>
-                </div>
+                </button>
 
-                <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
+                <button
+                  className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  onClick={() => {
+                    searchAndSetBook('1111111111');
+                  }}
+                >
                   <p>
                     <strong>Multiple Books:</strong> 1111111111
                     <span className="text-sm text-gray-600">(that’s 10 ones)</span>
                   </p>
-                </div>
-                <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
+                </button>
+
+                <button
+                  className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  onClick={() => {
+                    searchAndSetBook('0671708635');
+                  }}
+                >
                   <p>
                     <strong>Book With No Thumbnail:</strong> 0671708635
                   </p>
-                </div>
-                <div className="mt-6 rounded-xl bg-gray-100 p-4 shadow-sm">
+                </button>
+
+                <button
+                  className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  onClick={() => {
+                    searchAndSetBook('11112111111');
+                  }}
+                >
                   <p className="text-base text-gray-800">
                     <strong>No Books:</strong> <span className="font-mono">11112111111</span>
                   </p>
@@ -58,7 +99,7 @@ function HowToGuide() {
                       Show a “No Books Found” message on the <strong>Pretty Book</strong> page
                     </li>
                   </ol>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -69,5 +110,3 @@ function HowToGuide() {
 }
 
 export { HowToGuide };
-
-// 0671708635

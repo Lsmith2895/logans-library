@@ -40,12 +40,12 @@ function SearchBar() {
         }}
       />
       {/* Desktop search button */}
-      <button className="ml-6 hidden rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
+      <button className="ml-6 hidden cursor-pointer rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
         Find Books By ISBN
       </button>
 
       {/* mobile search button */}
-      <button className="ml-6 inline rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
+      <button className="ml-6 inline cursor-pointer rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
         <img src="./public/search.svg" className="h-5" />
       </button>
     </form>

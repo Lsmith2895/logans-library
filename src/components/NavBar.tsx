@@ -34,7 +34,7 @@ function NavBar() {
       {/* Hamburger Button */}
       <div className="relative md:hidden" ref={menuRef}>
         <button
-          className="focus:outline-none"
+          className="cursor-pointer focus:outline-none"
           onClick={() => setMenuOpen(prev => !prev)}
           type="button"
           data-testid="hamburger-button"
