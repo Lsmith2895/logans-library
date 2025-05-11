@@ -27,7 +27,7 @@ type VolumeInfo = {
   readingModes: {};
   printType: string;
   imageLinks: {
-    smallThumbnail: string;
+    smallThumbnail?: string;
     thumbnail?: string;
   };
   maturityRating: string;

@@ -1,13 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import { getBookByISBN } from '../api/googleBooks';
 import { useBookContext } from '../context/BookContext';
 
 function SearchBar() {
   const { state, dispatch } = useBookContext();
+  const navigate = useNavigate();
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     const book = await getBookByISBN(state.searchTerm);
     dispatch({ type: 'SET_BOOK', payload: book });
+
+    navigate('/library');
   };
 
   return (
@@ -36,12 +40,12 @@ function SearchBar() {
         }}
       />
       {/* Desktop search button */}
-      <button className="ml-6 hidden rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
+      <button className="ml-6 hidden cursor-pointer rounded-3xl border-2 border-[#b4e300] p-2 px-4 md:inline">
         Find Books By ISBN
       </button>
 
       {/* mobile search button */}
-      <button className="ml-6 inline rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
+      <button className="ml-6 inline cursor-pointer rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
         <img src="./public/search.svg" className="h-5" />
       </button>
     </form>
