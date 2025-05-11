@@ -1,10 +1,11 @@
 import { BookCard } from '../components/BookCard';
 import { useBookContext } from '../context/BookContext';
+import type { GoogleBook } from '../types/book';
 import { HowToGuide } from './HowToGuide';
 
 function LibraryPage() {
   const { state } = useBookContext();
-  const books = state.rawBook?.items;
+  const books: GoogleBook[] | undefined = state.rawBook?.items;
 
   if (!books) {
     return <HowToGuide />;
