@@ -17,9 +17,9 @@ function BookCard({ book }: BookCardProps) {
       <div className="flex">
         <img className="object-contain p-3" src={imageUrl} alt={`Cover of ${title}`} />
         <div className="flex flex-col justify-between">
-          <h1 className="text-2xl font-medium">{title}</h1>
-          <h2 className="text-[#b4e300]">
-            Author: <span className="text-white">{author}</span>
+          <h1 className="my-3 text-2xl font-medium">{title}</h1>
+          <h2 className="text-lg text-[#b4e300]">
+            Author: <span className="text-lg text-white">{author}</span>
           </h2>
           <div> {subtitle}</div>
         </div>

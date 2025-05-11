@@ -88,7 +88,7 @@ describe('SearchBar', () => {
       .reply(200, multipleBooksResponse);
 
     // Enter a valid ISBN and submit
-    await userEvent.click(screen.getByRole('link', { name: /pretty book/i }));
+    await userEvent.click(screen.getByRole('link', { name: /styled book/i }));
     await userEvent.type(searchInputBox, '1111111111');
     await userEvent.click(submitButton);
 

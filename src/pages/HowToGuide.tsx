@@ -33,7 +33,7 @@ function HowToGuide() {
               <li>Get a physical book from your library</li>
               <li>Find the barcode on the back of the book</li>
               <li>Type the barcode into the search bar</li>
-              <li>Navigate to the raw or pretty book via the menu</li>
+              <li>Navigate to the raw or styled book via the menu</li>
             </ol>
 
             <div className="mt-6 text-gray-700">
@@ -96,7 +96,7 @@ function HowToGuide() {
                       Show full raw JSON on the <strong>Raw JSON</strong> page
                     </li>
                     <li>
-                      Show a “No Books Found” message on the <strong>Pretty Book</strong> page
+                      Show a “No Books Found” message on the <strong>Styled Book</strong> page
                     </li>
                   </ol>
                 </button>
