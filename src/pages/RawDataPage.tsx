@@ -13,7 +13,9 @@ function RawDataPage() {
         <HowToGuide />
       ) : (
         <Animate>
-          <div className="pt-10 whitespace-pre-wrap">{JSON.stringify(state.rawBook, null, 2)}</div>
+          <div className="pt-10 break-words whitespace-pre-wrap">
+            {JSON.stringify(state.rawBook, null, 2)}
+          </div>
         </Animate>
       )}
     </div>
