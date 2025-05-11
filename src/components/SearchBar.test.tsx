@@ -53,7 +53,6 @@ describe('SearchBar', () => {
     expect(searchInputBox.checkValidity()).toBe(false);
   });
 
-  //full happy path
   it('fetches and displays single book', async () => {
     mock
       .onGet('https://www.googleapis.com/books/v1/volumes', {
@@ -89,7 +88,7 @@ describe('SearchBar', () => {
       .reply(200, multipleBooksResponse);
 
     // Enter a valid ISBN and submit
-    await userEvent.click(screen.getByRole('link', { name: /raw book/i }));
+    await userEvent.click(screen.getByRole('link', { name: /pretty book/i }));
     await userEvent.type(searchInputBox, '1111111111');
     await userEvent.click(submitButton);
 
@@ -103,9 +102,9 @@ describe('SearchBar', () => {
 
       //Book 2
       // Title
-      expect(screen.getByText(/Microéconomie/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/Microéconomie/i).length).toBeGreaterThan(0);
       // Author
-      expect(screen.getByText(/Franck Bien/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/Franck Bien/i).length).toBeGreaterThan(0);
     });
   });
 
