@@ -8,6 +8,11 @@ function LibraryPage() {
   const { state } = useBookContext();
   const books: GoogleBook[] | undefined = state.rawBook?.items;
 
+  if (state.rawBook === null) {
+    return <HowToGuide />
+  }
+
+
   return (
     <div className="p-4">
       <h1 className="p-3 text-4xl font-semibold">Pretty Book Data From Google Books API</h1>
@@ -21,7 +26,7 @@ function LibraryPage() {
           </div>
         </Animate>
       ) : (
-        <HowToGuide />
+        <div className='text-3xl m-5 text-red-600'> No Books Found </div>
       )}
     </div>
   );
