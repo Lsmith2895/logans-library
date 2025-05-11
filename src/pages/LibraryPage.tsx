@@ -1,3 +1,4 @@
+import { Animate } from '../components/Animate';
 import { BookCard } from '../components/BookCard';
 import { useBookContext } from '../context/BookContext';
 import type { GoogleBook } from '../types/book';
@@ -7,15 +8,21 @@ function LibraryPage() {
   const { state } = useBookContext();
   const books: GoogleBook[] | undefined = state.rawBook?.items;
 
-  if (!books) {
-    return <HowToGuide />;
-  }
-
   return (
-    <div className={`grid grid-cols-1 gap-3 md:grid-cols-2`}>
-      {books.map((book, index) => {
-        return <BookCard key={book.id || index} book={book} />;
-      })}
+    <div className="p-4">
+      <h1 className="p-3 text-4xl font-semibold">Pretty Book Data From Google Books API</h1>
+
+      {books ? (
+        <Animate>
+          <div className={`grid grid-cols-1 gap-3 md:grid-cols-2`}>
+            {books.map((book, index) => {
+              return <BookCard key={book.id || index} book={book} />;
+            })}
+          </div>
+        </Animate>
+      ) : (
+        <HowToGuide />
+      )}
     </div>
   );
 }

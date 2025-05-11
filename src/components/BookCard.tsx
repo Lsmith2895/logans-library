@@ -24,7 +24,7 @@ function BookCard({ book }: BookCardProps) {
           <div> {subtitle}</div>
         </div>
       </div>
-      <div className="overflow-hidden pt-6 font-extralight">{textSnippet}</div>
+      <div className="overflow-hidden px-3 pt-6 font-extralight">{textSnippet}</div>
     </div>
   );
 }

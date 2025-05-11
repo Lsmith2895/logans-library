@@ -1,16 +1,21 @@
+import { Animate } from '../components/Animate';
 import { useBookContext } from '../context/BookContext';
 import { HowToGuide } from './HowToGuide';
 
 function RawDataPage() {
   const { state } = useBookContext();
 
-  if (!state.rawBook) {
-    return <HowToGuide />;
-  }
-
   return (
     <div className="p-4">
-      <div className="pt-10 whitespace-pre-wrap">{JSON.stringify(state.rawBook, null, 2)}</div>
+      <h1 className="p-3 text-4xl font-semibold">Raw Book Data From Google Books API</h1>
+
+      {!state.rawBook ? (
+        <HowToGuide />
+      ) : (
+        <Animate>
+          <div className="pt-10 whitespace-pre-wrap">{JSON.stringify(state.rawBook, null, 2)}</div>
+        </Animate>
+      )}
     </div>
   );
 }

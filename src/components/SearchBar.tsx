@@ -11,7 +11,10 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex justify-end p-4 sm:justify-start">
+    <form
+      onSubmit={handleSearch}
+      className="flex max-w-7xl justify-end p-4 px-6 sm:justify-start md:px-20"
+    >
       <input
         className="rounded-4xl border-2 border-zinc-700 p-2 pl-4 outline-[#b4e300]"
         type="text"
