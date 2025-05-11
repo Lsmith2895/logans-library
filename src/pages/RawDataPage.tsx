@@ -7,7 +7,7 @@ function RawDataPage() {
 
   return (
     <div className="p-4">
-      <h1 className="p-3 text-4xl font-semibold"> Raw Book Data From Google Books </h1>
+      <h1 className="p-3 text-4xl font-semibold">Raw Book Data From Google Books API</h1>
 
       {!state.rawBook ? (
         <HowToGuide />
