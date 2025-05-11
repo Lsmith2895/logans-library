@@ -7,7 +7,7 @@ function HomePage() {
     <Animate>
       <div className="max-w-7xl p-4 md:mt-14 md:px-20">
         <div className="mb-10">
-          <div className="gradient-text text-5xl font-black sm:text-9xl">
+          <div className="gradient-text text-5xl font-black lg:text-9xl md:text-8xl">
             Question
             <br />
             Everything
