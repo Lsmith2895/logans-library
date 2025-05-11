@@ -52,7 +52,7 @@ function NavBar() {
                 Raw Book
               </Link>
               <Link to="/library" className="p-2" onClick={() => setMenuOpen(false)}>
-                Pretty Book
+                Styled Book
               </Link>
             </div>
           )}
@@ -62,7 +62,7 @@ function NavBar() {
       {/* DeskTop Menu */}
       <div className="hidden space-x-4 text-xl md:flex">
         <Link to="/raw">Raw Book</Link>
-        <Link to="/library">Pretty Book</Link>
+        <Link to="/library">Styled Book</Link>
       </div>
     </nav>
   );

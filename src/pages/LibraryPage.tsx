@@ -1,5 +1,6 @@
 import { Animate } from '../components/Animate';
 import { BookCard } from '../components/BookCard';
+import { NoBooksFound } from '../components/NoBooksFoundCard';
 import { useBookContext } from '../context/BookContext';
 import type { GoogleBook } from '../types/book';
 import { HowToGuide } from './HowToGuide';
@@ -11,7 +12,7 @@ function LibraryPage() {
   if (state.rawBook === null) {
     return (
       <div className="p-4">
-        <h1 className="p-3 text-4xl font-semibold">Pretty Book Data From Google Books API</h1>
+        <h1 className="p-3 text-4xl font-semibold">Styled Book Data</h1>
         <HowToGuide />
       </div>
     );
@@ -19,18 +20,18 @@ function LibraryPage() {
 
   return (
     <div className="p-4">
-      <h1 className="p-3 text-4xl font-semibold">Pretty Book Data From Google Books API</h1>
+      <h1 className="p-3 text-4xl font-semibold">Styled Book Data</h1>
 
       {books ? (
         <Animate>
-          <div className={`grid grid-cols-1 gap-3 md:grid-cols-2`}>
+          <div className={`grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3`}>
             {books.map((book, index) => {
               return <BookCard key={book.id || index} book={book} />;
             })}
           </div>
         </Animate>
       ) : (
-        <div className="m-5 text-3xl text-red-600"> No Books Found </div>
+        <NoBooksFound />
       )}
     </div>
   );
