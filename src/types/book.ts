@@ -26,7 +26,7 @@ type VolumeInfo = {
   publishedDate?: string;
   readingModes: {};
   printType: string;
-  imageLinks?: {
+  imageLinks: {
     smallThumbnail: string;
     thumbnail?: string;
   };

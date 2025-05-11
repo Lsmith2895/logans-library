@@ -5,17 +5,12 @@ type BookCardProps = {
 };
 
 function BookCard({ book }: BookCardProps) {
-  // Check to see if there is book state and set these variables
-  const {
-    title = 'Unknown title',
-    subtitle = '',
-    authors = [],
-    imageLinks,
-  } = book?.volumeInfo ?? {};
+  const { title, subtitle, authors, imageLinks } = book.volumeInfo;
 
-  const imageUrl = imageLinks?.thumbnail ?? imageLinks?.smallThumbnail ?? '';
+  // prioritize thumbnail for book image because it is the highest quality
+  const imageUrl = imageLinks.thumbnail ?? imageLinks?.smallThumbnail ?? '';
   const textSnippet = book.searchInfo?.textSnippet ?? '';
-  const author = authors[0] ?? 'Unknown';
+  const author = authors[0];
 
   return (
     <div className="m-4 rounded-3xl bg-gray-900 px-1 py-4">
