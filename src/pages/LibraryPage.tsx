@@ -9,9 +9,8 @@ function LibraryPage() {
   const books: GoogleBook[] | undefined = state.rawBook?.items;
 
   if (state.rawBook === null) {
-    return <HowToGuide />
+    return <HowToGuide />;
   }
-
 
   return (
     <div className="p-4">
@@ -26,7 +25,7 @@ function LibraryPage() {
           </div>
         </Animate>
       ) : (
-        <div className='text-3xl m-5 text-red-600'> No Books Found </div>
+        <div className="m-5 text-3xl text-red-600"> No Books Found </div>
       )}
     </div>
   );
