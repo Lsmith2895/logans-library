@@ -1,3 +1,4 @@
+import { Animate } from '../components/Animate';
 import { BookCard } from '../components/BookCard';
 import { useBookContext } from '../context/BookContext';
 import type { GoogleBook } from '../types/book';
@@ -12,11 +13,13 @@ function LibraryPage() {
   }
 
   return (
-    <div className={`grid grid-cols-1 gap-3 md:grid-cols-2`}>
-      {books.map((book, index) => {
-        return <BookCard key={book.id || index} book={book} />;
-      })}
-    </div>
+    <Animate>
+      <div className={`grid grid-cols-1 gap-3 md:grid-cols-2`}>
+        {books.map((book, index) => {
+          return <BookCard key={book.id || index} book={book} />;
+        })}
+      </div>
+    </Animate>
   );
 }
 
