@@ -5,21 +5,21 @@ import { useEffect, useState } from 'react';
 
 function RawJsonCard() {
   const { state } = useBookContext();
-  const [ animateIn, setAnimateIn ] = useState(false)
-  
+  const [animateIn, setAnimateIn] = useState(false);
+
   useEffect(() => {
     if (state.rawBook) {
-      setAnimateIn(true)
+      setAnimateIn(true);
     }
-   }, [state.rawBook])
+  }, [state.rawBook]);
 
   return (
     <>
       {state.rawBook && (
         <Link to="/raw">
-          <div className={`my-4 h-96 max-w-full rounded-3xl border border-[#597002] bg-gray-950 p-6 sm:mx-6 sm:h-[600px]
-        transform transition-all duration-800 ease-out
-        ${animateIn ? 'opacity-100 scale-100' : 'opacity-0 scale-85'}`}>
+          <div
+            className={`my-4 h-96 max-w-full transform rounded-3xl border border-[#597002] bg-gray-950 p-6 transition-all duration-800 ease-out sm:mx-6 sm:h-[600px] ${animateIn ? 'scale-100 opacity-100' : 'scale-85 opacity-0'}`}
+          >
             <h1 className="p-3 text-4xl font-semibold">RAW JSON</h1>
             <div className="h-5/6 pt-5">
               <Editor
