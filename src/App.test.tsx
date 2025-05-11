@@ -19,7 +19,7 @@ describe('App', () => {
     );
     // Check navbar exists
     expect(screen.getByText('Raw Book')).toBeInTheDocument();
-    expect(screen.getByText('Pretty Book')).toBeInTheDocument();
+    expect(screen.getByText('Styled Book')).toBeInTheDocument();
 
     // Check searchbar exists
     expect(screen.getByPlaceholderText('Search For Books by ISBN')).toBeInTheDocument();
@@ -27,8 +27,8 @@ describe('App', () => {
     //Check Raw JSON component is not there
     expect(screen.queryByText('RAW JSON')).not.toBeInTheDocument();
 
-    // Empty Pretty book page with how to guide
-    userEvent.click(screen.getByText('Pretty Book'));
+    // Empty Styled book page with how to guide
+    userEvent.click(screen.getByText('Styled Book'));
     expect(await screen.findByText('How to Search Books by ISBN')).toBeInTheDocument();
 
     // Empty Raw book page with how to guide
