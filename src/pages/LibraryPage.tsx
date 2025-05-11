@@ -9,7 +9,12 @@ function LibraryPage() {
   const books: GoogleBook[] | undefined = state.rawBook?.items;
 
   if (state.rawBook === null) {
-    return <HowToGuide />;
+    return (
+      <div className="p-4">
+        <h1 className="p-3 text-4xl font-semibold">Pretty Book Data From Google Books API</h1>
+        <HowToGuide />
+      </div>
+    );
   }
 
   return (
