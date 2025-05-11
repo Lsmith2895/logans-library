@@ -6,7 +6,6 @@ function HowToCard() {
       <div className="py-7 md:py-14">
         <div className="card-title text-4xl font-black md:text-5xl"> How-To Guide</div>
         <p>
-          {' '}
           Learn how to search for books by ISBN <br /> with these simle steps.
         </p>
         <Link to={'/guide'}>
