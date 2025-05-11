@@ -2,15 +2,22 @@ import { render, screen } from '@testing-library/react';
 import { BookContext } from '../context/BookContext';
 import { RawDataPage } from './RawDataPage';
 import type { GoogleBookResponse } from '../types/book';
+import { MemoryRouter } from 'react-router-dom';
+
+jest.mock('../utils/getGoogleBooksApiKey', () => ({
+  getGoogleBooksApiKey: () => 'test-key',
+}));
 
 describe('Raw Data Page', () => {
   it('shows the how to guide when no rawBook state', () => {
     render(
-      <BookContext.Provider
-        value={{ state: { rawBook: null, searchTerm: '' }, dispatch: () => {} }}
-      >
-        <RawDataPage />
-      </BookContext.Provider>
+      <MemoryRouter>
+        <BookContext.Provider
+          value={{ state: { rawBook: null, searchTerm: '' }, dispatch: () => {} }}
+        >
+          <RawDataPage />
+        </BookContext.Provider>
+      </MemoryRouter>
     );
 
     expect(screen.getByText(/How to Search Books by ISBN/i)).toBeInTheDocument();
