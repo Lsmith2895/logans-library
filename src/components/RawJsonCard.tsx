@@ -19,7 +19,7 @@ function RawJsonCard() {
         <Link to="/raw">
           <div className={`my-4 h-96 max-w-full rounded-3xl border border-[#597002] bg-gray-950 p-6 sm:mx-6 sm:h-[600px]
         transform transition-all duration-800 ease-out
-        ${animateIn ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        ${animateIn ? 'opacity-100 scale-100' : 'opacity-0 scale-85'}`}>
             <h1 className="p-3 text-4xl font-semibold">RAW JSON</h1>
             <div className="h-5/6 pt-5">
               <Editor
