@@ -44,6 +44,7 @@ function HowToGuide() {
               <div className="flex flex-col font-mono text-black">
                 <button
                   className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  data-testid="single-book-button"
                   onClick={() => {
                     searchAndSetBook('9781501184161');
                   }}
@@ -55,6 +56,7 @@ function HowToGuide() {
 
                 <button
                   className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  data-testid="multiple-books-button"
                   onClick={() => {
                     searchAndSetBook('1111111111');
                   }}
@@ -67,6 +69,7 @@ function HowToGuide() {
 
                 <button
                   className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  data-testid="no-thumbnail-book-button"
                   onClick={() => {
                     searchAndSetBook('0671708635');
                   }}
@@ -78,6 +81,7 @@ function HowToGuide() {
 
                 <button
                   className="mt-6 cursor-pointer rounded-xl bg-gray-100 p-4 shadow-sm transition-transform duration-100 hover:scale-102"
+                  data-testid="no-books-found-button"
                   onClick={() => {
                     searchAndSetBook('11112111111');
                   }}
