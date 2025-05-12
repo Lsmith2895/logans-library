@@ -8,7 +8,7 @@ function BookCard({ book }: BookCardProps) {
   const { title, subtitle, authors, imageLinks } = book.volumeInfo;
 
   // prioritize thumbnail for book image because it is the highest quality
-  const imageUrl = imageLinks?.thumbnail ?? imageLinks?.smallThumbnail ?? './public/no-image.svg';
+  const imageUrl = imageLinks?.thumbnail ?? imageLinks?.smallThumbnail ?? '/no-image.svg';
   const textSnippet = book.searchInfo?.textSnippet ?? '';
   const author = authors[0];
 
