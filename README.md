@@ -93,7 +93,8 @@ npm run test
 2. Create a new branch (`git checkout -b feature-branch`)
 3. Make changes and commit
 4. Lint and Format
-5. Open a pull request and fill out the description to let us know the changes you made
+5. Write some tests
+6. Open a pull request and fill out the description to let us know the changes you made
 
 ---
 
