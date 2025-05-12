@@ -40,23 +40,23 @@ function NavBar() {
           data-testid="hamburger-button"
         >
           <img src="../public/menu.svg" className="h-6 w-6" />
-          {/* Mobile Menu */}
-          {menuOpen && (
-            <div className="absolute right-0 mt-4 flex w-36 flex-col rounded-2xl border border-gray-700 bg-black p-4 text-lg md:hidden">
-              <Link
-                data-testid="hamburger-raw-book"
-                to="/raw"
-                onClick={() => setMenuOpen(false)}
-                className="p-2"
-              >
-                Raw Book
-              </Link>
-              <Link to="/library" className="p-2" onClick={() => setMenuOpen(false)}>
-                Styled Book
-              </Link>
-            </div>
-          )}
         </button>
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="absolute right-0 mt-4 flex w-36 flex-col rounded-2xl border border-gray-700 bg-black p-4 text-lg md:hidden">
+            <Link
+              data-testid="hamburger-raw-book"
+              to="/raw"
+              onClick={() => setMenuOpen(false)}
+              className="p-2"
+            >
+              Raw Book
+            </Link>
+            <Link to="/library" className="p-2" onClick={() => setMenuOpen(false)}>
+              Styled Book
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* DeskTop Menu */}
