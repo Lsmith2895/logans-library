@@ -42,6 +42,12 @@ VITE_GOOGLE_BOOKS_API_KEY=your_api_key_here
 
 You can get a key from [Google Books API](https://developers.google.com/books/docs/v1/using#APIKey).
 
+### 4. **Startup th dev server**
+
+```bash
+npm run dev
+```
+The App should automatically open with this command!
 ---
 
 ## 💻 Requirements
