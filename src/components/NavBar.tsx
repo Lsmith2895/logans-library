@@ -25,7 +25,7 @@ function NavBar() {
   return (
     <nav className="mb-4 flex h-20 items-center justify-between border-b bg-black p-4 px-10 text-[#b4e300]">
       <div className="flex items-center">
-        <img src="../public/SquareLogo.png" className="w-10" aria-label="logo" alt="logo" />
+        <img src="/SquareLogo.png" className="w-10" aria-label="logo" alt="logo" />
         <Link to="/">
           <div className="text-2xl font-extrabold text-white md:text-4xl">Fallibilism</div>
         </Link>
@@ -39,7 +39,7 @@ function NavBar() {
           type="button"
           data-testid="hamburger-button"
         >
-          <img src="../public/menu.svg" className="h-6 w-6" />
+          <img src="/menu.svg" className="h-6 w-6" />
         </button>
         {/* Mobile Menu */}
         {menuOpen && (

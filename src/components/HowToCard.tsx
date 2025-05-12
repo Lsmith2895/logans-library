@@ -15,7 +15,7 @@ function HowToCard() {
         </Link>
       </div>
       <div className="w-1/3">
-        <img src="./public/book-icon.png" className="my-12 h-30 md:h-50" />
+        <img src="/book-icon.png" className="my-12 h-30 md:h-50" />
       </div>
     </div>
   );

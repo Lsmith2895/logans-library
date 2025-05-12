@@ -46,7 +46,7 @@ function SearchBar() {
 
       {/* mobile search button */}
       <button className="ml-6 inline cursor-pointer rounded-3xl border-2 border-[#b4e300] p-2.5 px-4 md:hidden">
-        <img src="./public/search.svg" className="h-5" />
+        <img src="/search.svg" className="h-5" />
       </button>
     </form>
   );
