@@ -848,4 +848,159 @@ const noBooksResponse: GoogleBookResponse = {
   totalItems: 0,
 };
 
-export { singleBookResponse, multipleBooksResponse, noBooksResponse };
+const noThumbnailResponse: GoogleBookResponse = {
+  kind: 'books#volumes',
+  totalItems: 2,
+  items: [
+    {
+      kind: 'books#volume',
+      id: 'q5JFeNF196EC',
+      etag: '8s1Z8xTFbII',
+      selfLink: 'https://www.googleapis.com/books/v1/volumes/q5JFeNF196EC',
+      volumeInfo: {
+        title: 'The 7 Habits of Highly Effective People',
+        subtitle: 'Powerful Lessons in Personal Change',
+        authors: ['Stephen R. Covey'],
+        publishedDate: '2004',
+        description:
+          'In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems. With penetrating insights and pointed anecdotes, Covey reveals a step-by-step pathway for living with fairness, integrity, service, and human dignity -- principles that give us the security to adapt to change and the wisdom and power to take advantage of the opportunities that change creates.',
+        industryIdentifiers: [
+          {
+            type: 'ISBN_10',
+            identifier: '0671708635',
+          },
+          {
+            type: 'ISBN_13',
+            identifier: '9780671708634',
+          },
+        ],
+        readingModes: {
+          text: false,
+          image: false,
+        },
+        pageCount: 372,
+        printType: 'BOOK',
+        categories: ['Character'],
+        averageRating: 4,
+        ratingsCount: 30,
+        maturityRating: 'NOT_MATURE',
+        allowAnonLogging: false,
+        contentVersion: '7.7.3.0.preview.0',
+        panelizationSummary: {
+          containsEpubBubbles: false,
+          containsImageBubbles: false,
+        },
+        imageLinks: {
+          smallThumbnail:
+            'http://books.google.com/books/content?id=q5JFeNF196EC&printsec=frontcover&img=1&zoom=5&source=gbs_api',
+          thumbnail:
+            'http://books.google.com/books/content?id=q5JFeNF196EC&printsec=frontcover&img=1&zoom=1&source=gbs_api',
+        },
+        language: 'en',
+        previewLink:
+          'http://books.google.com/books?id=q5JFeNF196EC&dq=isbn:0671708635&hl=&cd=1&source=gbs_api',
+        infoLink:
+          'http://books.google.com/books?id=q5JFeNF196EC&dq=isbn:0671708635&hl=&source=gbs_api',
+        canonicalVolumeLink:
+          'https://books.google.com/books/about/The_7_Habits_of_Highly_Effective_People.html?hl=&id=q5JFeNF196EC',
+      },
+      saleInfo: {
+        country: 'US',
+        saleability: 'NOT_FOR_SALE',
+        isEbook: false,
+      },
+      accessInfo: {
+        country: 'US',
+        viewability: 'NO_PAGES',
+        embeddable: false,
+        publicDomain: false,
+        textToSpeechPermission: 'ALLOWED',
+        epub: {
+          isAvailable: false,
+        },
+        pdf: {
+          isAvailable: false,
+        },
+        webReaderLink: 'http://play.google.com/books/reader?id=q5JFeNF196EC&hl=&source=gbs_api',
+        accessViewStatus: 'NONE',
+        quoteSharingAllowed: false,
+      },
+      searchInfo: {
+        textSnippet:
+          'In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems.',
+      },
+    },
+    {
+      kind: 'books#volume',
+      id: 'Nf70wAEACAAJ',
+      etag: 'Tmc+GeeZ3y0',
+      selfLink: 'https://www.googleapis.com/books/v1/volumes/Nf70wAEACAAJ',
+      volumeInfo: {
+        title: 'The 7 Habits of Highly Effective People',
+        subtitle: 'Powerful Lessons in Personal Change',
+        authors: ['Stephen R. Covey'],
+        publishedDate: '2004',
+        description:
+          'In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems. With penetrating insights and pointed anecdotes, Covey reveals a step-by-step pathway for living with fairness, integrity, service, and human dignity -- principles that give us the security to adapt to change and the wisdom and power to take advantage of the opportunities that change creates.',
+        industryIdentifiers: [
+          {
+            type: 'ISBN_10',
+            identifier: '0671708635',
+          },
+          {
+            type: 'ISBN_13',
+            identifier: '9780671708634',
+          },
+        ],
+        readingModes: {
+          text: false,
+          image: false,
+        },
+        pageCount: 358,
+        printType: 'BOOK',
+        categories: ['Character'],
+        maturityRating: 'NOT_MATURE',
+        allowAnonLogging: false,
+        contentVersion: 'preview-1.0.0',
+        panelizationSummary: {
+          containsEpubBubbles: false,
+          containsImageBubbles: false,
+        },
+        language: 'en',
+        previewLink:
+          'http://books.google.com/books?id=Nf70wAEACAAJ&dq=isbn:0671708635&hl=&cd=2&source=gbs_api',
+        infoLink:
+          'http://books.google.com/books?id=Nf70wAEACAAJ&dq=isbn:0671708635&hl=&source=gbs_api',
+        canonicalVolumeLink:
+          'https://books.google.com/books/about/The_7_Habits_of_Highly_Effective_People.html?hl=&id=Nf70wAEACAAJ',
+      },
+      saleInfo: {
+        country: 'US',
+        saleability: 'NOT_FOR_SALE',
+        isEbook: false,
+      },
+      accessInfo: {
+        country: 'US',
+        viewability: 'NO_PAGES',
+        embeddable: false,
+        publicDomain: false,
+        textToSpeechPermission: 'ALLOWED',
+        epub: {
+          isAvailable: false,
+        },
+        pdf: {
+          isAvailable: false,
+        },
+        webReaderLink: 'http://play.google.com/books/reader?id=Nf70wAEACAAJ&hl=&source=gbs_api',
+        accessViewStatus: 'NONE',
+        quoteSharingAllowed: false,
+      },
+      searchInfo: {
+        textSnippet:
+          'In The 7 Habits of Highly Effective People, author Stephen R. Covey presents a holistic, integrated, principle-centered approach for solving personal and professional problems.',
+      },
+    },
+  ],
+};
+
+export { singleBookResponse, multipleBooksResponse, noBooksResponse, noThumbnailResponse };
