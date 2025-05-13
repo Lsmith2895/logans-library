@@ -14,6 +14,7 @@ function HowToGuide() {
     const book = await getBookByISBN(isbn);
     dispatch({ type: 'SET_BOOK', payload: book });
 
+    // Guide page buttons don't display books directly, so route to a book-visible page on click
     if (location.pathname.includes('guide')) {
       navigate('/library');
     }

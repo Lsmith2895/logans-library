@@ -72,7 +72,6 @@ describe('How To Guide', () => {
   });
 
   it('Opens no thumbnail display', async () => {
-    //
     mock
       .onGet('https://www.googleapis.com/books/v1/volumes', {
         params: {
@@ -82,7 +81,7 @@ describe('How To Guide', () => {
       })
       .reply(200, noThumbnailResponse);
 
-    //go to styled book page to ensure the default image show when no thumbnail available
+    //go to styled book page to ensure the default image shows when no thumbnail available
     await userEvent.click(screen.getByRole('link', { name: /styled book/i }));
 
     const noThumbnailButton = screen.getByTestId('no-thumbnail-book-button');
