@@ -108,7 +108,6 @@ describe('SearchBar', () => {
     });
   });
 
-  //update me
   it('fetches and displays no books with valid response', async () => {
     mock
       .onGet('https://www.googleapis.com/books/v1/volumes', {
