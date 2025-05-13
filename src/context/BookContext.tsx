@@ -28,6 +28,7 @@ function reducer(state: State, action: Action): State {
 
 function BookProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, { rawBook: null, searchTerm: '' });
+  return <BookContext.Provider value={{ state, dispatch }}>{children}</BookContext.Provider>;
 
   // This functionality automatically searches for a book
   // useful for dev environment
@@ -43,13 +44,12 @@ function BookProvider({ children }: { children: ReactNode }) {
   //   });
   // }, []);
 
-  return <BookContext.Provider value={{ state, dispatch }}>{children}</BookContext.Provider>;
 }
 
 function useBookContext() {
   const context = useContext(BookContext);
   if (!context) {
-    throw new Error('useBookContext must be used in Book Provider');
+    throw new Error('useBookContext must be used in a Book Provider');
   }
   return context;
 }
