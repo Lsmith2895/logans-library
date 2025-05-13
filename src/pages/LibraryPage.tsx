@@ -25,8 +25,8 @@ function LibraryPage() {
       {books ? (
         <Animate>
           <div className={`grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3`}>
-            {books.map((book, index) => {
-              return <BookCard key={book.id || index} book={book} />;
+            {books.map((book) => {
+              return <BookCard key={book.id} book={book} />;
             })}
           </div>
         </Animate>
